@@ -1,0 +1,92 @@
+/* vars -- colors */
+$grey: #3a3a46;
+$green: #b4d455;
+$purple: #661b87;
+$red: #ca372a;
+$white: #fff;
+
+/* vars -- type - fonts */
+$display: 'Kelly Slab', sans-serif;
+$body: 'Open Sans', sans-serif;
+
+/* vars -- type - weights */
+$regular: 400;
+$bold: 700;
+
+/* vars -- type - sizes */
+$xxxl: 2.5rem;
+$xxl: 2rem;
+$xl: 1.6rem;
+$l: 1.4rem;
+$m: 1.2rem;
+$s: 1rem;
+$xs: 0.8rem;
+$xxs: 0.7rem;
+
+/* vars -- animation */
+$timing: 1s;
+
+/* vars -- whitespace */
+$spacing: 40px;
+
+/* vars -- styles */
+$border: 5px;
+
+/* vars -- breakpoints */
+$breakpoints: (
+  'wide'          '(min-width: 1440px)',
+  'desktop'       '(min-width: 1100px)',
+  'laptop'        '(min-width: 900px)',
+  'tablet'        '(min-width: 800px)',
+  'mobile'        '(min-width: 650px)',
+  'tiny'          '(min-width: 420px)',
+);
+
+/* mixins */
+@mixin media-query($queries...) {
+  @each $query in $queries {
+    @each $breakpoint in $breakpoints {
+      $name:        nth($breakpoint, 1);
+      $declaration: nth($breakpoint, 2);
+
+      @if $query == $name and $declaration {
+        @media only screen and #{$declaration} {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+@mixin debug {
+  outline: 1px dotted red;
+}
+
+@mixin reset-link {
+  font-weight: unset;
+  color: unset;
+  text-decoration: none;
+}
+
+@mixin reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+}
+
+/* styles */
+.page-enter-active, .page-leave-active {
+  transition: transform ( $timing / 2 ) ease;
+}
+.page-enter {
+  transform: translateX(-101vw);
+}
+.page-leave-to {
+  transform: translateX(101vw);
+}
