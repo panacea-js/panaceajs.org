@@ -35,6 +35,7 @@
       </li>
     </ol>
     <h6>And last but not least an H6</h6>
+    <PanaceaCards></PanaceaCards>
   </main>
 </template>
 
@@ -43,12 +44,14 @@
   import PanaceaButtonLinkExt from '~/components/atoms/PanaceaButtonLinkExt.vue'
   import PanaceaButton from '~/components/atoms/PanaceaButton.vue'
   import PanaceaQuote from '~/components/atoms/PanaceaQuote.vue'
+  import PanaceaCards from '~/components/organisms/PanaceaCards.vue'
   export default {
     components: {
       PanaceaButtonLinkInt,
       PanaceaButtonLinkExt,
       PanaceaButton,
-      PanaceaQuote
+      PanaceaQuote,
+      PanaceaCards
     },
     methods: {
       buttonAlert () {

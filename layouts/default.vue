@@ -80,6 +80,7 @@
     line-height: 1.5;
     box-shadow: 0 0 0 ( $spacing / 4 ) $green;
     background: $green;
+    margin: 0;
     display: inline;
     white-space: pre-wrap;
 
