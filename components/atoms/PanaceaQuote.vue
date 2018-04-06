@@ -27,12 +27,14 @@
     margin: $spacing 0;
     border-left: ( $spacing / 4 ) solid transparent;
     border-right: ( $spacing / 4 ) solid transparent;
+
     &__text {
       font-size: $xxl;
       line-height: 1.5;
       background: $green;
       box-shadow: 0 0 0 ( $spacing / 4 ) $green;
     }
+
     &__cite {
       white-space: nowrap;
       font-size: $l;
@@ -41,26 +43,34 @@
       color: $white;
       box-shadow: 0 0 0 ( $spacing / 4 ) $grey;
       margin: 0 0 0 23px;
-      &:before {
+
+      &::before {
         content: "- "
       }
+
     }
+
     &__quote-left,
     &__quote-right {
       width: $spacing;
       height: $spacing;
     }
+
     &__quote-left {
       margin: 0 $spacing 0 ( $spacing / 2 );
     }
+
     &__quote-right {
       margin: 0 $spacing ( ($spacing / 4) * -1 );
     }
+
   }
   .quote-left,
   .quote-right {
+
     &__path {
       fill: $grey;
     }
+
   }
 </style>

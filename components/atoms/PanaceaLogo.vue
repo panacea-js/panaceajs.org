@@ -33,25 +33,32 @@
 
 <style lang="scss">
   .logo {
+
     &__contain {
       display: block;
       height: ( $spacing * 1.5 );
+
       @include media-query(laptop) {
         height: ( $spacing * 2.25 );
       }
+
     }
+
     &__flask,
     &__panacea {
       fill: $white;
     }
+
     &__slime,
     &__bubble,
     &__js {
       fill: $green;
     }
+
     &__bubble {
       transition: opacity 2s ease;
       will-change: opacity;
     }
+    
   }
 </style>

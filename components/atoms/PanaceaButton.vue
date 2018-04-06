@@ -36,15 +36,12 @@
     font-size: $m;
     color: $grey;
     font-weight: $bold;
-    box-shadow: 0 0 0 0 $green;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     backface-visibility: hidden;
     transform-origin: bottom left;
-    transform: skewX(-20deg);
-    transition: all ( $timing / 2 ) ease;
-    will-change: transform, box-shadow;
+    
     &__slime {
       position: absolute;
       left: 0;
@@ -55,20 +52,22 @@
       will-change: transform;
       z-index: -1;
     }
+
     &__text {
       display: block;
       transition: all ( $timing * 2 ) ease;
-      transform: skewX(20deg);
       line-height: 1.2;
     }
+
     &:focus,
     &:active,
     &:hover {
-      transform: skewX(-20deg) translate(-1px, -2px);
-      box-shadow: 5px 5px 0 0 $green;
+
       .btn__slime {
         transform: translateY(0);
       }
+      
     }
+
   }
 </style>

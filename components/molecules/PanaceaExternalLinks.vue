@@ -45,43 +45,56 @@
 <style lang="scss">
   .menu-ext-links {
     background: $grey;
+
     &__contain {
       @include reset-list;
       display: flex;
       padding: ( $spacing / 2);
     }
+
     &__item {
       margin: 0 ( $spacing / 2 );
+
       &:first-child {
         margin-left: 0;
       }
+
       &:last-child {
         margin-right: 0;
       }
+
     }
+
     &__link {
       @include reset-link;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       &:hover {
+
         .menu-ext-links__icon {
           fill: $green;
           transform: scale(1.5) skewY(-5deg);
         }
+
         .menu-ext-links__text {
           color: $green;
           transform: scale(1.2) skewY(-5deg);
         }
+
       }
+
     }
+
     &__icon {
       fill: $white;
       transition: all ( $timing / 2 ) ease;
       transform: scale(1) skewY(-5deg);
       will-change: fill, transform;
     }
+
     &__text {
       display: block;
       color: $white;
@@ -93,5 +106,6 @@
       transform: scale(1) skewY(-5deg);
       will-change: color, transform;
     }
+
   }
 </style>

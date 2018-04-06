@@ -18,9 +18,11 @@
 <style lang="scss">
   .footer {
     background: $grey;
+
     &__contain {
       display: flex;
       justify-content: center;
     }
+    
   }
 </style>

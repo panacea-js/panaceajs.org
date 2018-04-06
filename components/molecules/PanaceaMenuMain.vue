@@ -34,16 +34,19 @@
 
 <style lang="scss">
   .menu-main {
+
     &__contain {
       @include reset-list;
       height: 100%;
       display: flex;
       align-items: stretch;
     }
+
     &__item {
       position: relative;
       overflow: hidden;
     }
+
     &__link {
       @include reset-link;
       display: flex;
@@ -53,30 +56,43 @@
       padding: ( $spacing / 4 );
       position: relative;
       transform: skewY(-5deg);
+
       @include media-query(laptop) {
         padding: ( $spacing / 2 );
       }
+
       &:hover {
+
         .menu-main__slime {
           transform: skewY(5deg) translateY(50px);
+
           @include media-query(mobile) {
             transform: skewY(5deg) translateY(60px);
           }
+
           @include media-query(laptop) {
             transform: skewY(5deg) translateY(90px);
           }
+
         }
+
       }
+
       &.nuxt-link-exact-active,
       &:active {
+
         .menu-main__slime {
           transform: skewY(5deg) translateY(0);
         }
+
         .menu-main__text {
           color: $grey;
         }
+
       }
+
     }
+
     &__slime {
       position: absolute;
       left: 0;
@@ -85,17 +101,22 @@
       transform: skewY(5deg) translateY(65px);
       transition: all ( $timing * 2 ) ease;
       will-change: transform;
+
       @include media-query(mobile) {
         transform: skewY(5deg) translateY(80px);
       }
+
       @include media-query(laptop) {
         transform: skewY(5deg) translateY(120px);
       }
+
       .slime__path {
         transition: fill $timing ease;
         will-change: fill;
       }
+
     }
+
     &__text {
       display: block;
       color: $white;
@@ -106,17 +127,24 @@
       will-change: color;
       position: relative;
       z-index: 1;
+
       @include media-query(mobile) {
         font-size: $s;
       }
+
       @include media-query(laptop) {
         font-size: $m;
       }
+
     }
+
   }
+
   .slime {
+
     &__path {
       fill: $green;
     }
+    
   }
 </style>
