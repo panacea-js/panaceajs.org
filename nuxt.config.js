@@ -1,4 +1,5 @@
 const resolve = require('path').resolve
+const normalizeCssPath = require.resolve('normalize.css')
 
 module.exports = {
   /*
@@ -24,7 +25,7 @@ module.exports = {
   ** Styles configuration
   */
   css: [
-    'normalize.css'
+    normalizeCssPath
   ],
   /*
   ** Modules configuration
@@ -32,7 +33,6 @@ module.exports = {
   modules: [
     ['nuxt-sass-resources-loader', [
       resolve(__dirname, 'assets/stylesheets/global.scss'),
-      resolve(__dirname, 'assets/normalize.css')
     ]]
   ],
   /*
@@ -43,7 +43,7 @@ module.exports = {
     ** Run ESLint on save
     */
     extend (config, ctx) {
-      if (ctx.dev && ctx.isClient) {
+      if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
