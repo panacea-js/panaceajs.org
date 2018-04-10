@@ -1,7 +1,8 @@
 <template>
   <nav class="menu-ext-links">
     <ul class="menu-ext-links__contain">
-      <li class="menu-ext-links__item" v-for="item in MenuExtLinksItems">
+      
+      <li class="menu-ext-links__item" v-for="(item, index) in MenuExtLinksItems" :key="index">
         <a :href="item.url" class="menu-ext-links__link" target="_blank">
           <div class="menu-ext-links__icon" v-html="item.icon"></div>
           <span class="menu-ext-links__text">{{ item.text }}</span>
