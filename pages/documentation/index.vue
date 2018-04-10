@@ -1,6 +1,10 @@
 <template>
   <main class="content" role="main">
-    <div class="github-docs" v-html="commonmark(githubDocs)"></div>
+    <ul class="errors" v-if="errors.length > 0" v-for="(error, key) in errors" :key="key">
+      <li>{{ error.message }}</li>
+    </ul>
+    <h2 class="loading" v-if="showLoading">Loading...</h2>
+    <div class="github-docs" v-if="githubDocs.length > 0" v-html="githubDocs"></div>
   </main>
 </template>
 
@@ -9,28 +13,31 @@
   import commonmark from 'commonmark'
 
   export default {
-    components: {
-
+    data () {
+      return {
+        githubDocsRawURL: 'https://raw.githubusercontent.com/panacea-js/core/master/README.md',
+        githubDocs: '',
+        errors: []
+      }
+    },
+    computed: {
+      showLoading: function() {
+        return !this.githubDocs.length && !this.errors.length
+      }
     },
     methods: {
-      commonmark: (input) => {
+      convertMarkdownOutput: function (input) {
         const reader = new commonmark.Parser()
         const writer = new commonmark.HtmlRenderer()
         const parsed = reader.parse(input) // node tree
         return writer.render(parsed) // string
       }
     },
-    data () {
-      return {
-        githubDocs: []
-      }
-    },
-    // Fetches posts when the component is created.
-    created () {
-      axios.get('https://raw.githubusercontent.com/panacea-js/core/master/README.md')
+    // Fetches posts when the component is mounted.
+    mounted () {
+      axios.get(this.githubDocsRawURL)
         .then(response => {
-          console.log(response)
-          this.githubDocs = response.data
+          this.githubDocs = this.convertMarkdownOutput(response.data)
         })
         .catch(e => {
           this.errors.push(e)
