@@ -4,6 +4,7 @@
   <p>A solution or remedy for all the difficulties you've ever faced when dealing with a CMS.</p>
   <p>PanaceaJS is written in node js, coupled with mongo and opinionated towards graphql.</p>
   <p>Stop battling with your current CMS and come and revel in the joy that is treating your data like a first class citizen, and passing it off to your happy front-end team who can write in whatever framework takes their fancy!</p>
+  <p>The future of content management is now!</p>
   <div class="buttons">
     <PanaceaButtonLinkExt href="https://github.com/panacea-js">Get started</PanaceaButtonLinkExt>
     <PanaceaButtonLinkInt to="/documentation">Documentation</PanaceaButtonLinkInt>
