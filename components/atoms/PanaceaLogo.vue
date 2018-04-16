@@ -59,7 +59,7 @@ export default {
   }
 
   &__bubble {
-    transition: opacity 2s ease;
+    transition: opacity ($timing * 2) ease;
     will-change: opacity;
   }
 
