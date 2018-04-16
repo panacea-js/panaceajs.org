@@ -1,7 +1,7 @@
 <template>
 <div class="card">
   <div class="card__contain">
-    <img class="card__image" v-bind:src="imgSrc" v-bind:alt="imgAlt">
+    <img class="card__image" :src="imgSrc" :alt="imgAlt">
     <h3 class="card__title">{{ title }}</h3>
     <p class="card__teaser">{{ teaser }}</p>
     <nuxt-link :to="url" class="card__link">Read more</nuxt-link>

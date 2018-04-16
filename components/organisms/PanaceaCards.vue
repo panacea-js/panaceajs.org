@@ -17,10 +17,10 @@ export default {
     return {
       title: 'This is the overall cards title',
       cards: [
-        {imgSrc: 'https://www.reallifedigital.com/sites/default/files/styles/medium/public/fields/articles/images/front-base-bordon_0.jpg?itok=M_fXp3RK', imgAlt: 'alt1', title: 'Title 1', teaser: 'This is the first item teaser', url: '/'},
-        {imgSrc: 'https://www.reallifedigital.com/sites/default/files/styles/medium/public/fields/articles/images/vienna-2997032.jpg?itok=MkNID8EX', imgAlt: 'alt2', title: 'Second title', teaser: 'A teaser for the second item', url: '/'},
-        {imgSrc: 'https://www.reallifedigital.com/sites/default/files/styles/medium/public/fields/articles/images/photographer-16022.jpg?itok=HZgkfkPQ', imgAlt: 'alt3', title: 'This one be the third', teaser: 'The teaser for this one is three times as good', url: '/'},
-        {imgSrc: 'https://www.reallifedigital.com/sites/default/files/styles/medium/public/fields/articles/images/rld_website-element_blog-sass-flex_wide-1.jpg?itok=4Wl91lma', imgAlt: 'alt4', title: 'May the fourth be with you', teaser: 'Fourth time lucky for a beautiful teaser', url: '/'}
+        {imgSrc: '/images/cards/base-bordon.jpg', imgAlt: 'alt1', title: 'Title 1', teaser: 'This is the first item teaser', url: '/'},
+        {imgSrc: '/images/cards/vienna.jpg', imgAlt: 'alt2', title: 'Second title', teaser: 'A teaser for the second item', url: '/'},
+        {imgSrc: '/images/cards/photographer.jpg', imgAlt: 'alt3', title: 'This one be the third', teaser: 'The teaser for this one is three times as good', url: '/'},
+        {imgSrc: '/images/cards/sass-flex.jpg', imgAlt: 'alt4', title: 'May the fourth be with you', teaser: 'Fourth time lucky for a beautiful teaser', url: '/'}
       ]
     }
   }

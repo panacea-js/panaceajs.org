@@ -16,7 +16,7 @@
     "axios": "^0.17.0",
     "commonmark": "^0.28.1",
     "normalize.css": "^7.0.0",
-    "nuxt": "^1.0.0-rc11",
+    "nuxt": "^1.4.0",
     "nuxt-sass-resources-loader": "^1.1.0"
   },
   "devDependencies": {

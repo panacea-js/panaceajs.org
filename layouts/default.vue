@@ -33,8 +33,8 @@ html {
 :root {
   font-family: $font--body;
   color: $color--navy;
-  line-height: 2;
-  font-size: 14px;
+  line-height: 1.5;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -55,8 +55,6 @@ html {
 
 body {
   background-color: $color--white;
-  background-image: url("/assets/images/blue-triangles.svg");
-  background-size: 200px;
   counter-reset: list-ordered;
 }
 

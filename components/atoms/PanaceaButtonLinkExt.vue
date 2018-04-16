@@ -1,5 +1,5 @@
 <template>
-<a class="btn" :href="href">
+<a class="btn" :href="href" target="_blank" rel="noopener">
   <div class="btn__slime">
     <svg class="slime" x="0px" y="0px" viewBox="0 0 40 100" width="100%" height="200" preserveAspectRatio="none" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <path class="slime__path" d="M40,8.19V2.986c0,0-8.99-6.718-19.955,0C10.683,8.722,2.263,4.665,0,3.356V100.19H100z">
