@@ -1,7 +1,7 @@
 <template>
 <header class="header" role="banner">
   <div class="header__contain">
-    <PanaceaLogo/>
+    <PanaceaLogo class="logo--reverse"/>
     <PanaceaMenuMain/>
   </div>
 </header>

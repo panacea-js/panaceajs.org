@@ -35,7 +35,7 @@
     </li>
   </ol>
   <h6>And last but not least an H6</h6>
-  <PanaceaCards></PanaceaCards>
+  <PanaceaCards/>
 </main>
 </template>
 

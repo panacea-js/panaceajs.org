@@ -1,9 +1,11 @@
 /* vars -- colors */
 $color--navy: #3a3a46;
 $color--green: #b4d455;
-$color--purple: #661b87;
 $color--red: #ca372a;
-$color--white: #fff;
+$color--purple: #661b87;
+$color--pink: #e61973;
+$color--white: #ffffff;
+$color--black: #222222;
 
 /* vars -- type - fonts */
 $font--display: 'Kelly Slab', sans-serif;
@@ -31,6 +33,7 @@ $spacing: 40px;
 
 /* vars -- styles */
 $border: 4px;
+$border-radius: 10px;
 
 /* vars -- breakpoints */
 $breakpoints: (

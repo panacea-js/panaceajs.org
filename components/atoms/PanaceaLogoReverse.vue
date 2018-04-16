@@ -1,5 +1,5 @@
 <template>
-<div class="logo">
+<div class="logo--reverse">
   <svg class="logo__contain" viewBox="-20 -20 317.24 100" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="logo__title logo__desc" role="img">
     <title id="logo__title">Panacea JS logo</title>
     <desc id="logo__desc">A concical flask full of green liquid, followed by the word panacea JS.</desc>
@@ -26,48 +26,19 @@
 
 <script>
 export default {
-  data () {
-    return {
-    }
-  }
+
 }
 </script>
 
 <style lang="scss">
 .logo {
   $root: &;
-  
-  &__contain {
-    display: block;
-    height: ( $spacing * 1.5 );
-
-    @include media-query(laptop) {
-      height: ( $spacing * 2.25 );
-    }
-
-  }
-
-  &__flask,
-  &__panacea {
-    fill: $color--navy;
-  }
-
-  &__slime,
-  &__bubble,
-  &__js {
-    fill: $color--green;
-  }
-
-  &__bubble {
-    transition: opacity 2s ease;
-    will-change: opacity;
-  }
 
   &--reverse {
 
     #{$root}__flask,
     #{$root}__panacea {
-      fill: $color--white;
+      fill: $color--navy;
     }
 
   }

@@ -1,7 +1,7 @@
 <template>
 <nav class="menu-main">
   <ul class="menu-main__contain">
-    <li class="menu-main__item" v-for="item in MenuMainItems">
+    <li class="menu-main__item" v-for="(item, menuItemIndex) in MenuMainItems" :key="menuItemIndex">
       <nuxt-link :to="item.url" class="menu-main__link">
         <div class="menu-main__slime">
           <svg class="slime" x="0px" y="0px" viewBox="0 0 40 100" width="100%" height="200" preserveAspectRatio="none" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -25,6 +25,7 @@ export default {
         {text: 'overview', url: '/'},
         {text: 'ecosystem', url: '/ecosystem'},
         {text: 'documentation', url: '/documentation'},
+        {text: 'brand', url: '/brand'},
         {text: 'support', url: '/support'}
       ]
     }

@@ -2,7 +2,7 @@
 <div class="cards">
   <h2 class="cards__title">{{ title }}</h2>
   <div class="cards__contain">
-    <PanaceaCard v-for="(card, index) in cards" :key="index" :imgSrc="card.imgSrc" :imgAlt="card.imgAlt" :title="card.title" :teaser="card.teaser" :url="card.url"></PanaceaCard>
+    <PanaceaCard v-for="(card, index) in cards" :key="index" :imgSrc="card.imgSrc" :imgAlt="card.imgAlt" :title="card.title" :teaser="card.teaser" :url="card.url"/>
   </div>
 </div>
 </template>
