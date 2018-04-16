@@ -1,28 +1,28 @@
 <template>
-  <footer class="footer" role="contentinfo">
-    <div class="footer__contain">
-      <PanaceaExternalLinks/>
-    </div>
-  </footer>
+<footer class="footer" role="contentinfo">
+  <div class="footer__contain">
+    <PanaceaExternalLinks/>
+  </div>
+</footer>
 </template>
 
 <script>
-  import PanaceaExternalLinks from '~/components/molecules/PanaceaExternalLinks.vue'
-  export default {
-    components: {
-      PanaceaExternalLinks
-    }
+import PanaceaExternalLinks from '~/components/molecules/PanaceaExternalLinks.vue'
+export default {
+  components: {
+    PanaceaExternalLinks
   }
+}
 </script>
 
 <style lang="scss">
-  .footer {
-    background: $grey;
+.footer {
+  background: $color--navy;
 
-    &__contain {
-      display: flex;
-      justify-content: center;
-    }
-    
+  &__contain {
+    display: flex;
+    justify-content: center;
   }
+  
+}
 </style>

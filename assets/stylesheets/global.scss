@@ -1,13 +1,13 @@
 /* vars -- colors */
-$grey: #3a3a46;
-$green: #b4d455;
-$purple: #661b87;
-$red: #ca372a;
-$white: #fff;
+$color--navy: #3a3a46;
+$color--green: #b4d455;
+$color--purple: #661b87;
+$color--red: #ca372a;
+$color--white: #fff;
 
 /* vars -- type - fonts */
-$display: 'Kelly Slab', sans-serif;
-$body: 'Open Sans', sans-serif;
+$font--display: 'Kelly Slab', sans-serif;
+$font--body: 'Open Sans', sans-serif;
 
 /* vars -- type - weights */
 $regular: 400;
@@ -30,7 +30,7 @@ $timing: 1s;
 $spacing: 40px;
 
 /* vars -- styles */
-$border: 5px;
+$border: 4px;
 
 /* vars -- breakpoints */
 $breakpoints: (
