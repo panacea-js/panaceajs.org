@@ -30,7 +30,8 @@ export default {
   display: inline-block;
   background: transparent;
   border: $border solid $color--navy;
-  border-radius: 0;
+  border-bottom-width: ($border * 2);
+  border-radius: $border-radius;
   margin: ($spacing / 2) ($spacing / 2) ($spacing / 2) 0;
   padding: ($spacing / 2);
   font-family: $font--display;

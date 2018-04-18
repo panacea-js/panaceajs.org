@@ -30,13 +30,13 @@ export default {
 
   &__swatch {
     height: 100px;
-    border: ($border / 2) solid $color--navy;
+    border: $border solid $color--navy;
     border-bottom: 0;
     border-radius: $border-radius $border-radius 0 0;
   }
 
   &__details {
-    border: ($border / 2) solid $color--navy;
+    border: $border solid $color--navy;
     border-radius: 0 0 $border-radius $border-radius;
     padding: ($spacing / 2);
     display: flex;

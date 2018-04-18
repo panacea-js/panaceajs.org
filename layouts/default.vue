@@ -56,6 +56,15 @@ html {
 body {
   background-color: $color--white;
   counter-reset: list-ordered;
+
+  *::selection {
+    background-color: $color--green;
+  }
+  
+  *::-moz-selection {
+    background-color: $color--green;
+  }
+
 }
 
 p {
@@ -64,7 +73,6 @@ p {
 
 a {
   color: $color--pink;
-  font-weight: $bold;
   text-decoration: none;
 
   &:hover,

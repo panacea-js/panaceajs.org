@@ -49,12 +49,12 @@ export default {
 
   &__description {
     padding: ($spacing / 2);
-    border: ($border / 2) solid $color--navy;
+    border: $border solid $color--navy;
     border-radius: 0 0 $border-radius $border-radius;
   }
 
   .logo {
-    border: ($border / 2) solid $color--navy;
+    border: $border solid $color--navy;
     border-bottom: 0;
     border-radius: $border-radius $border-radius 0 0;
     display: flex;

@@ -72,7 +72,8 @@ export default {
     justify-content: center;
     align-items: center;
 
-    &:hover {
+    &:hover,
+    &:focus {
 
       .menu-ext-links__icon {
         fill: $color--green;

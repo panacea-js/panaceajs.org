@@ -24,7 +24,7 @@ export default {
   position: sticky;
   top: 0;
   z-index: 999;
-  border-bottom: $border solid $color--green;
+  border-bottom: ($border * 2) solid $color--green;
 
   &__contain {
     display: flex;
