@@ -75,7 +75,19 @@ $breakpoints: (
 @mixin reset-link {
   font-weight: unset;
   color: unset;
-  text-decoration: none;
+  
+  &:hover,
+  &:focus {
+    text-decoration: unset;
+  }
+
+  &:focus {
+    outline: unset;
+    background-color: unset;
+    box-shadow: unset;
+    color: unset;
+  }
+  
 }
 
 @mixin reset-list {

@@ -26,21 +26,20 @@ export default {
 
 <style lang="scss">
 .btn {
+  $root: &;
   display: inline-block;
   background: transparent;
   border: $border solid $color--navy;
   border-radius: 0;
-  margin: ( $spacing / 2 ) ( $spacing / 2 ) ( $spacing / 2 ) 0;
-  padding: ( $spacing / 2 );
+  margin: ($spacing / 2) ($spacing / 2) ($spacing / 2) 0;
+  padding: ($spacing / 2);
   font-family: $font--display;
-  font-size: $m;
   color: $color--navy;
   font-weight: $bold;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   backface-visibility: hidden;
-  transform-origin: bottom left;
   
   &__slime {
     position: absolute;
@@ -48,14 +47,13 @@ export default {
     top: -20px;
     right: 0;
     transform: translateY(100px);
-    transition: all ( $timing * 2 ) ease;
+    transition: transform ( $timing * 2 ) ease;
     will-change: transform;
     z-index: -1;
   }
 
   &__text {
     display: block;
-    transition: all ( $timing * 2 ) ease;
     line-height: 1.2;
   }
 
@@ -67,6 +65,15 @@ export default {
       transform: translateY(0);
     }
     
+  }
+
+  &:focus {
+    outline: none;
+
+    #{$root}__text {
+      text-decoration: underline;
+    }
+
   }
 
 }

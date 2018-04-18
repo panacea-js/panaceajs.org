@@ -63,8 +63,22 @@ p {
 }
 
 a {
-  font-weight: bold;
-  color: $color--red;
+  color: $color--pink;
+  font-weight: $bold;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $color--pink;
+    box-shadow: 0px 0px 0px 2px $color--pink;
+    color: $color--white;
+  }
+
 }
 
 h1,

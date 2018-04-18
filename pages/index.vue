@@ -6,8 +6,8 @@
   <p>Stop battling with your current CMS and come and revel in the joy that is treating your data like a first class citizen, and passing it off to your happy front-end team who can write in whatever framework takes their fancy!</p>
   <p>The future of content management is now!</p>
   <div class="buttons">
-    <PanaceaButtonLinkExt href="https://github.com/panacea-js">Get started</PanaceaButtonLinkExt>
-    <PanaceaButtonLinkInt to="/documentation">Documentation</PanaceaButtonLinkInt>
+    <PanaceaCtaExt href="https://github.com/panacea-js">Get started</PanaceaCtaExt>
+    <PanaceaCtaInt to="/documentation">Documentation</PanaceaCtaInt>
   </div>
   <h2>Testing an H2</h2>
   <div class="buttons">
@@ -41,15 +41,15 @@
 </template>
 
 <script>
-import PanaceaButtonLinkInt from '~/components/atoms/PanaceaButtonLinkInt.vue'
-import PanaceaButtonLinkExt from '~/components/atoms/PanaceaButtonLinkExt.vue'
+import PanaceaCtaInt from '~/components/atoms/PanaceaCtaInt.vue'
+import PanaceaCtaExt from '~/components/atoms/PanaceaCtaExt.vue'
 import PanaceaButton from '~/components/atoms/PanaceaButton.vue'
 import PanaceaQuote from '~/components/atoms/PanaceaQuote.vue'
 import PanaceaCards from '~/components/organisms/PanaceaCards.vue'
 export default {
   components: {
-    PanaceaButtonLinkInt,
-    PanaceaButtonLinkExt,
+    PanaceaCtaInt,
+    PanaceaCtaExt,
     PanaceaButton,
     PanaceaQuote,
     PanaceaCards

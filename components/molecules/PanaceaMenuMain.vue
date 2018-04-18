@@ -35,6 +35,7 @@ export default {
 
 <style lang="scss">
 .menu-main {
+  $root: &;
 
   &__contain {
     @include reset-list;
@@ -62,9 +63,10 @@ export default {
       padding: ( $spacing / 2 );
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
 
-      .menu-main__slime {
+      #{$root}__slime {
         transform: skewY(5deg) translateY(50px);
 
         @include media-query(mobile) {
@@ -79,14 +81,23 @@ export default {
 
     }
 
+    &:focus {
+      outline: none;
+
+      #{$root}__text {
+        text-decoration: underline;
+      }
+
+    }
+
     &.nuxt-link-exact-active,
     &:active {
 
-      .menu-main__slime {
+      #{$root}__slime {
         transform: skewY(5deg) translateY(0);
       }
 
-      .menu-main__text {
+      #{$root}__text {
         color: $color--navy;
       }
 
