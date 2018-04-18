@@ -23,6 +23,7 @@ export default {
         {colorName: 'Purple', colorVar: '$color--purple', colorValue: '#661b87'},
         {colorName: 'Pink', colorVar: '$color--pink', colorValue: '#e61973'},
         {colorName: 'Black', colorVar: '$color--black', colorValue: '#222222'},
+        {colorName: 'Grey', colorVar: '$color--grey', colorValue: '#ebebec'},
         {colorName: 'White', colorVar: '$color--white', colorValue: '#ffffff'}
       ]
     }

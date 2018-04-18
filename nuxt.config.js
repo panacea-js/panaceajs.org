@@ -32,7 +32,8 @@ module.exports = {
   */
   modules: [
     ['nuxt-sass-resources-loader', [
-      resolve(__dirname, 'assets/stylesheets/global.scss')
+      resolve(__dirname, 'assets/stylesheets/vars.scss'),
+      resolve(__dirname, 'assets/stylesheets/base.scss')
     ]]
   ],
   /*
