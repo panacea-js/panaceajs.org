@@ -59,9 +59,9 @@ export default {
       content: '';
       display: block;
       right: 0;
-      bottom: ($border / 2);
+      bottom: $border;
       left: 0;
-      height: ($border / 2);
+      height: $border;
       background-color: $color--pink;
       transform-origin: left;
       transform: scale3d(0, 1, 1);
