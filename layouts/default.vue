@@ -22,6 +22,7 @@ export default {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  perspective: 1000px;
 
   .header,
   .footer {
@@ -32,5 +33,20 @@ export default {
     flex-grow: 1;
   }
   
+}
+
+/* styles */
+.page-enter-active,
+.page-leave-active {
+  transition: transform ( $timing / 2 ) ease;
+  will-change: transform;
+}
+
+.page-enter {
+  transform: translateX(-101vw);
+}
+
+.page-leave-to {
+  transform: translateX(101vw);
 }
 </style>

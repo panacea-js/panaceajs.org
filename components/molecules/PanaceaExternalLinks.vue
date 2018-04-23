@@ -49,6 +49,7 @@ export default {
   &__contain {
     @include reset-list;
     display: flex;
+    justify-content: center;
     padding: ( $spacing / 2);
   }
 
