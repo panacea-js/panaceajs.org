@@ -11,8 +11,17 @@
   </div>
   <h2>Testing an H2</h2>
   <div class="buttons">
-    <PanaceaButton :onClick="buttonAlert">A really cool button with long text</PanaceaButton>
-    <PanaceaButton :onClick="buttonAlert2">And a short one</PanaceaButton>
+    <PanaceaButton :onClick="buttonAlert">
+      <template slot="text">A really cool button with long text and an svg icon</template>
+      <template slot="svg">
+        <svg x="0px" y="0px" viewBox="0 0 256 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M187.8 264.5L41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z"/>
+        </svg>
+      </template>
+    </PanaceaButton>
+    <PanaceaButton :onClick="buttonAlert2">
+      <template slot="text">And a short one</template>
+    </PanaceaButton>
   </div>
   <h3>Testing an H3</h3>
   <PanaceaQuote>

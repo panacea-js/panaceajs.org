@@ -1,6 +1,6 @@
 <template>
 <blockquote class="quote">
-  <q class="quote__text"><slot name="quote" trim></slot></q>
+  <q class="quote__text"><slot name="quote"></slot></q>
   <cite class="quote__cite"><slot name="cite"></slot></cite>
 </blockquote>
 </template>
@@ -27,6 +27,7 @@ export default {
     &::after {
       content: none;
     }
+    
   }
 
   &__cite {

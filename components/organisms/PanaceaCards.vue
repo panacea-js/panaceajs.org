@@ -17,10 +17,34 @@ export default {
     return {
       title: 'This is the overall cards title',
       cards: [
-        {imgSrc: '/images/cards/base-bordon.jpg', imgAlt: 'alt1', title: 'Title 1', teaser: 'This is the first item teaser', url: '/'},
-        {imgSrc: '/images/cards/vienna.jpg', imgAlt: 'alt2', title: 'Second title', teaser: 'A teaser for the second item', url: '/'},
-        {imgSrc: '/images/cards/photographer.jpg', imgAlt: 'alt3', title: 'This one be the third', teaser: 'The teaser for this one is three times as good', url: '/'},
-        {imgSrc: '/images/cards/sass-flex.jpg', imgAlt: 'alt4', title: 'May the fourth be with you', teaser: 'Fourth time lucky for a beautiful teaser', url: '/'}
+        {
+          imgSrc: '/images/cards/base-bordon.jpg',
+          imgAlt: 'alt1',
+          title: 'Title 1',
+          teaser: 'This is the first item teaser',
+          url: '/'
+        },
+        {
+          imgSrc: '/images/cards/vienna.jpg',
+          imgAlt: 'alt2',
+          title: 'Second title',
+          teaser: 'A teaser for the second item',
+          url: '/'
+        },
+        {
+          imgSrc: '/images/cards/photographer.jpg',
+          imgAlt: 'alt3',
+          title: 'This one be the third',
+          teaser: 'The teaser for this one is three times as good',
+          url: '/'
+        },
+        {
+          imgSrc: '/images/cards/sass-flex.jpg',
+          imgAlt: 'alt4',
+          title: 'May the fourth be with you',
+          teaser: 'Fourth time lucky for a beautiful teaser which runs on for far too long to see what will happen and no doubt it will be awful but in order to experience how awful I\'ll need to add lots more!',
+          url: '/'
+        }
       ]
     }
   }

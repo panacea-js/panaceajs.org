@@ -7,9 +7,14 @@
       </path>
     </svg>
   </div>
-  <span class="btn__text">
-    <slot></slot>
-  </span>
+  <div class="btn__details">
+    <div class="btn__text">
+      <slot name="text"></slot>
+    </div>
+    <div class="btn__svg">
+      <slot name="svg"></slot>
+    </div>
+  </div>  
 </button>
 </template>
 
@@ -31,7 +36,7 @@ export default {
   background: transparent;
   border: $border solid $color--navy;
   border-bottom-width: ($border * 2);
-  border-radius: $border-radius;
+  border-radius: 0;//$border-radius;
   margin: ($spacing / 2) ($spacing / 2) ($spacing / 2) 0;
   padding: ($spacing / 2);
   font-family: $font--display;
@@ -53,9 +58,26 @@ export default {
     z-index: -1;
   }
 
+  &__details {
+    display: flex;
+    align-items: center;
+  }
+
   &__text {
     display: block;
     line-height: 1.2;
+  }
+
+  &__svg {
+    display: flex;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: $color--navy;
+      margin-left: ($spacing / 8);
+    }
+
   }
 
   &:focus,
