@@ -1,18 +1,21 @@
 <template>
-<div class="panacea-default">
+<div>
   <PanaceaSiteHeader/>
   <nuxt/>
   <PanaceaSiteFooter/>
+  <PanaceaCookies/>
 </div>
 </template>
 
 <script>
 import PanaceaSiteHeader from '~/components/organisms/PanaceaSiteHeader.vue'
 import PanaceaSiteFooter from '~/components/organisms/PanaceaSiteFooter.vue'
+import PanaceaCookies from '~/components/molecules/PanaceaCookies.vue'
 export default {
   components: {
     PanaceaSiteHeader,
-    PanaceaSiteFooter
+    PanaceaSiteFooter,
+    PanaceaCookies
   }
 }
 </script>
