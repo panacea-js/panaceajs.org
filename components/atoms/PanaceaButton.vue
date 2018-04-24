@@ -35,10 +35,9 @@ export default {
   display: inline-block;
   background: transparent;
   border: $border solid $color--navy;
-  border-bottom-width: ($border * 2);
-  border-radius: 0;//$border-radius;
+  border-radius: 0;
   margin: ($spacing / 2) ($spacing / 2) ($spacing / 2) 0;
-  padding: ($spacing / 2);
+  padding: ($spacing / 2) ($spacing / 2) (($spacing / 2) + ($border * 2));
   font-family: $font--display;
   color: $color--navy;
   font-weight: $bold;
@@ -46,6 +45,8 @@ export default {
   position: relative;
   overflow: hidden;
   backface-visibility: hidden;
+  transition: transform ($timing / 8) ease;
+  will-change: transform;
   
   &__slime {
     position: absolute;
@@ -80,12 +81,30 @@ export default {
 
   }
 
+  &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: ($border * 2);
+      background-color: $color--navy;
+      transform-origin: bottom center;
+      transition: transform ($timing / 8) ease;
+      will-change: transform;
+    }
+
   &:focus,
   &:active,
   &:hover {
+    transform: translate3d(0, $border, 0);
 
     .btn__slime {
       transform: translateY(0);
+    }
+
+    &::after {
+      transform: scale3d(1, 0, 1);
     }
     
   }

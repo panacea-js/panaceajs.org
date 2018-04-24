@@ -99,6 +99,7 @@ export default {
 
       #{$root}__text {
         color: $color--navy;
+        text-decoration: underline;
       }
 
     }

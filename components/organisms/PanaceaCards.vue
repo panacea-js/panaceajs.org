@@ -57,13 +57,23 @@ export default {
 
   &__contain {
     display: flex;
+    flex-wrap: wrap;
     margin: -($spacing / 2);
   }
 
 }
 
 .card {
-  flex-basis: 25%;
+  flex-basis: 100%;
   padding: ($spacing / 2);
+
+  @include media-query(mobile) {
+    flex-basis: 50%;
+  }
+
+  @include media-query (desktop) {
+    flex-basis: 25%;
+  }
+
 }
 </style>

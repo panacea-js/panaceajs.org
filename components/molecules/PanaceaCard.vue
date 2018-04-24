@@ -3,7 +3,7 @@
   <nuxt-link :to="url" class="card__link">
     <img class="card__image" :src="imgSrc" :alt="imgAlt">
     <h3 class="card__title">{{ title }}</h3>
-    <p class="card__teaser">{{ teaser | truncate(80) }}</p>
+    <p class="card__teaser">{{ teaser | truncate(35) }}</p>
   </nuxt-link>
 </div>
 </template>

@@ -1,9 +1,12 @@
 <template>
 <no-ssr>
-  <cookie-law theme="panacea">
-    <div slot="message">
-      Here is my message for more info <router-link to="legal-notes">Click here</router-link>
-    </div>
+  <cookie-law 
+    theme="panacea"
+    buttonText="Got it!"
+    buttonLink="/legal"
+    buttonLinkText="Read more"
+    message="This website uses cookies to ensure you get the best experience on our website."
+  >
   </cookie-law>
 </no-ssr>
 </template>
@@ -23,10 +26,16 @@ export default {
   right: $spacing !important;
   bottom: $spacing !important;
   left: $spacing !important;
+
+  @include media-query(mobile) {
+    flex-direction: row !important;
+  }
+
   // Custom
-  background: $color--navy;
+  background: rgba($color--black, 0.9);
   color: $color--white;
   padding: ($spacing / 2);
+  border: $border solid $color--white;
 
   @include media-query(tablet) {
     right: ($spacing * 2) !important;
@@ -38,16 +47,47 @@ export default {
     left: ($spacing * 4) !important;
   }
 
+  #{$root}__content {
+    margin: 0 0 ($spacing / 2);
+
+    @include media-query(mobile) {
+      margin: 0;
+    }
+  }
+
+  #{$root}__buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin: 0;
+
+     @include media-query(mobile) {
+       flex-grow: 1;
+       margin: 0 0 0 ($spacing / 2);
+     }
+
+  }
+
   #{$root}__button {
     background-color: $color--green;
     color: $color--navy;
     padding: ($spacing / 4) ($spacing / 2);
-    margin-top: -($border * 3);
+    margin: -($border * 3) ($spacing / 4) 0;
     font-family: $font--display;
     font-weight: $bold;
     position: relative;
     transition: transform ($timing / 8) ease;
     will-change: transform;
+    white-space: nowrap;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &::after {
       content: '';
@@ -66,6 +106,8 @@ export default {
     &:focus {
       outline: none;
       transform: translate3d(0, ($border * 2), 0);
+      box-shadow: none;
+      text-decoration: none;
 
       &::after {
         transform: scale3d(1, 0, 1);
